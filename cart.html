@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+    <title>Your Cart</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <style>
+        /* Additional styles for the cart section */
+      
+        .cart-message{
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center; /* Center the text */
+        }
+        .cart-message {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }.cart {
+    background-color: #efeeed; /* Light brown contact section background color */
+    color: #7a430c; /* Dark brown text color */
+}
+
+        .product-image img {
+            max-width: 80px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(153, 116, 116, 0.1);
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+        }
+
+        .quantity input {
+            width: 40px;
+            text-align: center;
+            border: none;
+            border-top: 1px solid #46698c;
+            border-bottom: 1px solid #ced4da;
+            padding: 5px 0;
+            margin: 0 5px;
+        }
+
+        .product-details {
+            flex-grow: 1;
+            margin-left: 15px;
+        }
+
+        .product-details h6 {
+            margin: 0;
+            font-size: 16px;
+            color: #a81717;
+        }
+
+        .product-details p {
+            margin: 0;
+            color: #1474c8;
+        }
+
+        #total-amount {
+            font-size: 18px;
+            color: #343a40;
+        }
+
+        .btn-primary {
+            background-color: #aca17d;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #5f5f27;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body id="top">
+    <!-- ==============header menu section starts here============== -->
+    <section class="header_menu" id="header_menu">
+        <div class="container-fluid px-0 shadow">
+            <nav class="navbar navbar-expand-lg navbar-light py-3 " style="background-color: #2087ee;">
+                        <a class="navbar-brand pl-5 pl-small-0" href="index.html">
+              <img src="assets/images/logo.png" class="img img-fluid" width="120px" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+              
+               <li class="nav-item">
+                  <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item  active">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li> -->
+              </ul>
+              <div class="search mr-3">
+                <a href="search.html" class="btn btn-sm btn-outline-light">
+                  Search
+                </a>
+              </div>
+              
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <!-- ==============header menu section ends here============== -->
+      
+
+
+    <section class="cart py-5 my-5" id="cart">
+        <h1 style="text-align: center;">YOUR CART</h1>
+        <div class="cart-message">
+            Thank you for shopping with us! This page showcases all the shoes you’ve selected. Feel free to browse your selections and make any changes before completing your purchase. Enjoy!
+        </div>
+        <div id="cart-items-container"></div>
+        <div class="container"></div>
+            <div class="row">
+                <div class="col-md-8 border-right">
+                    <div id="cartItems"></div> <!-- Cart items will be displayed here -->
+                </div><ul id="cartList"></ul>
+                <p id="totalPrice"></p>
+                
+
+                <div class="col-md-4 rounded">
+                    <div class="mb-3">
+                        <div style="width: 60%; margin: 0 auto; background-color: lightgray;">
+                        <div class="pt-4">
+                            <h3 style="text-align:center;"class="mb-3">Order Summary</h3>
+                            <ul class="list-group list-group-flush" id="order-summary-list">
+                                <!-- Order summary items will be added here dynamically -->
+                            </ul>
+                            <h6 style="text-align:center;"class="mb-3">Total amount: <u style="color: #ff5733;">Ksh 0.00</u></h6>
+                            <a href="checkout.html" class="btn btn-primary btn-block">Go to Checkout</a>
+                        </div>
+                        <h5 style="text-align: center;">Pay with M-Pesa</h5>
+                        <form id="mpesa-payment-form" style="text-align: center;">
+                            <input type="tel" id="phone-number" placeholder="Enter your M-Pesa number" required>
+                           <li> <button type="submit">Pay with M-Pesa</button></li>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Function to display cart items
+        function displayCartItems() {
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            var cartList = document.getElementById('cartList'); // Make sure this matches your HTML structure
+            var totalPrice = 0;
+    
+            // Clear the cart list before displaying
+            cartList.innerHTML = '';
+    
+            // Check if the cart is empty
+            if (cart.length === 0) {
+                cartList.innerHTML = '<p>Your cart is empty!</p>';
+                return;
+            }
+    
+            // Loop through the cart and create list items
+            cart.forEach(function(item) {
+                var listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - KSh ${item.price.toFixed(2)}`;
+                cartList.appendChild(listItem);
+                totalPrice += item.price; // Calculate total price
+            });
+    
+            // Display total price
+            var totalElement = document.getElementById('totalPrice');
+            totalElement.textContent = `Total Price: KSh ${totalPrice.toFixed(2)}`;
+        }
+    
+        // Run the function on page load
+        window.onload = displayCartItems;
+    </script>
+    
+        
+        <!-- In your HTML body, make sure to have a container for cart items -->
+        <div id="cart-items-container"></div>
+        
+
+    
+ <!-- ==============footer starts here============== -->
+ <section class="footer_section pt-5 pb-2 mt-5" id="footer_section">
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-6 pl-5">
+                    <div class="footer_title">
+                        <img src="assets/images/logo.png" width="150px" class="img img-fluid" alt="logo">
+                    </div>
+                    <div>
+                                              </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="footer_title pt-3 mb-3">
+                        <h3>Quick Links</h3>
+                    </div>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="javascript:;">About</a></li>
+                            <li><a href="javascript:;">Offers & Discounts</a></li>
+                            <li><a href="javascript:;">Get Coupon</a></li>
+                            <li><a href="javascript:;">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-6">
+                    <div class="footer_title pt-3 mb-3">
+                        <h3>Support</h3>
+                    </div>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="javascript:;">Frequently Asked Questions</a></li>
+                            <li><a href="javascript:;">Terms & Conditions</a></li>
+                            <li><a href="javascript:;">Privacy Policy</a></li>
+                            <li><a href="javascript:;">Report a Payment Issue</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-top">
+            <h6 class="text-center mt-3"> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved @2024 This website was made by: <a href="https://wa.me/254717328354?text=Hello%20Nivlek.%20I%20need%20a%20talk%20for%20business" target="_blank"  style="color: red; font-weight: bold;">Nivlek.
+            </h6>
+        </div>
+    </footer>
+</section>
+<div class="backtop">
+    <a id="button" href="#top" class="btn btn-lg btn-outline-danger" role="button">
+        <i class="fas fa-chevron-up text-dark"></i>
+    </a>
+</div>
+<!-- ==============footer ends here============== -->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+  crossorigin="anonymous"></script>
+</body>
+
+</html>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || []; // Retrieve cart from localStorage
+            let totalAmount = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+
+            function updateOrderSummary() {
+                const orderSummaryList = document.getElementById('order-summary-list');
+                orderSummaryList.innerHTML = '';
+
+                cartItems.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center', 'border-0', 'px-0', 'pb-2');
+                    listItem.innerHTML = `
+                        <span>${item.name}</span>
+                        <span>x${item.quantity}</span>
+                        <span>Ksh${(item.price * item.quantity).toFixed(2)}</span>
+                    `;
+                    orderSummaryList.appendChild(listItem);
+                });
+
+                const totalAmountElement = document.getElementById('total-amount');
+                totalAmountElement.textContent = `Ksh${totalAmount.toFixed(2)}`;
+            }
+
+            updateOrderSummary();
+
+            const quantityInputs = document.querySelectorAll('.quantity');
+            quantityInputs.forEach((input, index) => {
+                const increaseButton = input.parentNode.querySelector('.btn-outline-primary:last-child');
+                const decreaseButton = input.parentNode.querySelector('.btn-outline-primary:first-child');
+
+                increaseButton.addEventListener('click', () => {
+                    if (cartItems[index].quantity < 10) {
+                        cartItems[index].quantity++;
+                        totalAmount += cartItems[index].price;
+                        updateOrderSummary();
+                    }
+                });
+
+                decreaseButton.addEventListener('click', () => {
+                    if (cartItems[index].quantity > 1) {
+                        cartItems[index].quantity--;
+                        totalAmount -= cartItems[index].price;
+                        updateOrderSummary();
+                    }
+                });
+            });
+        });
+
+        document.getElementById('mpesa-payment-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const phoneNumber = document.getElementById('phone-number').value;
+            alert(`Processing M-Pesa payment for number: ${phoneNumber}`);
+            // Here you would typically send this information to your server to process the payment
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper
+   

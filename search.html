@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- style.css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- fontawesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+
+    <title>Search</title>
+</head>
+
+<body id="top">
+    <!-- ==============header menu section starts here============== -->
+    <section class="header_menu" id="header_menu">
+        <div class="container-fluid px-0 shadow">
+            <nav class="navbar navbar-expand-lg navbar-light py-3 " style="background-color: #2087ee;">
+                        <a class="navbar-brand pl-5 pl-small-0" href="index.html">
+              <img src="assets/images/logo.png" class="img img-fluid" width="120px" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+              
+               
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item  active">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li> -->
+              </ul>
+              
+          </div>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <!-- ==============header menu section ends here============== -->
+    <!-- ==============header menu section ends here============== -->
+    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Shop</title>
+    <!------css sheets for search page--->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            position: absolute;
+            top: -8px;
+            right: -12px;
+            background-color: #007bff;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 50%;
+            font-size: 12px;
+        }
+
+        .product-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-item {
+            display: block;
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: #555;
+        }
+
+        
+    </style>
+
+    <!-- FontAwesome for the cart icon -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="header">
+        <div class="search-container">
+            <input type="text" id="searchBox" class="search-box" placeholder="Search for shoes..." onkeyup="searchProducts()">
+        </div>
+
+        
+        </div>
+    </div>
+
+    <ul id="productList" class="product-list">
+        <li class="product-item" data-name="Nike Air Max" data-price="3400">
+            <span class="product-name">Nike Air Max</span><br>
+            <span class="product-price">Ksh 3400</span><br>
+            
+        </li>
+        <li class="product-item" data-name="Adidas Ultraboost" data-price="1449">
+            <span class="product-name">Adidas </span><br>
+            <span class="product-price">Ksh 1449</span><br>
+           
+        </li>
+        <li class="product-item" data-name="Puma Running Shoes" data-price="3750">
+            <span class="product-name">Jordan 4</span><br>
+            <span class="product-price">Ksh 3750</span><br>
+            
+        </li>
+        <li class="product-item" data-name="Reebok Classics" data-price="5499">
+            <span class="product-name">Gabacci</span><br>
+            <span class="product-price">Ksh 5499</span><br>
+            
+        </li>
+    </ul>
+
+    <script>
+        // Search products by name
+        function searchProducts() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('searchBox');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("productList");
+            li = ul.getElementsByTagName('li');
+
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("span")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = ""; // Show matching products
+                } else {
+                    li[i].style.display = "none"; // Hide others
+                }
+            }
+        }
+
+        // Add product to localStorage (cart)
+        function addToCart(name, price) {
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: name, price: price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Update cart count badge
+            updateCartBadge();
+
+            alert(name + ' has been added to the cart!');
+        }
+
+        // Function to update cart item count badge
+        function updateCartBadge() {
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.querySelector('.badge').textContent = cart.length; // Update badge with current count
+        }
+
+        // Update cart badge on page load
+        window.onload = updateCartBadge;
+    </script>
+
+</body>
+</html>
+
+    <!-- ==============search section ends here============== -->
+
+                </div>
+                <!-- END RESULT -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============search section ends here============== -->
+    <script>
+        const cartItems=[
+           { name: "Addidas Shoes", price:2559}, 
+           {name: "Gabacci Shoes", price:3499}, 
+           {name: "Soloman Sports Wear",price:2999}
+    ]
+        
+    </script>
+
+
+
+        <!-- ==============footer starts here============== -->
+        <section class="footer_section pt-5 pb-2 mt-5" id="footer_section">
+            <footer>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 col-6 pl-5">
+                            <div class="footer_title">
+                                <img src="assets/images/logo.png" width="150px" class="img img-fluid" alt="logo">
+                            </div>
+                            <div>
+                                                      </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="footer_title pt-3 mb-3">
+                                <h3>Quick Links</h3>
+                            </div>
+                            <div class="footer_links">
+                                <ul>
+                                    <li><a href="javascript:;">About</a></li>
+                                    <li><a href="javascript:;">Offers & Discounts</a></li>
+                                    <li><a href="javascript:;">Get Coupon</a></li>
+                                    <li><a href="javascript:;">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6">
+                            <div class="footer_title pt-3 mb-3">
+                                <h3>Support</h3>
+                            </div>
+                            <div class="footer_links">
+                                <ul>
+                                    <li><a href="javascript:;">Frequently Asked Questions</a></li>
+                                    <li><a href="javascript:;">Terms & Conditions</a></li>
+                                    <li><a href="javascript:;">Privacy Policy</a></li>
+                                    <li><a href="javascript:;">Report a Payment Issue</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-top">
+                    <h6 class="text-center mt-3"> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved @2024 This website was made by: <a href="https://wa.me/254717328354?text=Hello%20Nivlek.%20I%20need%20a%20talk%20for%20business" target="_blank"  style="color: red; font-weight: bold;">NivLek.
+                    </h6>
+                </div>
+            </footer>
+        </section>
+        <div class="backtop">
+            <a id="button" href="#top" class="btn btn-lg btn-outline-danger" role="button">
+                <i class="fas fa-chevron-up text-dark"></i>
+            </a>
+        </div>
+        <!-- ==============footer ends here============== -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

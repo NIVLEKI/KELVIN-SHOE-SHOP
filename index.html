@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- style.css  -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- fontawesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+    crossorigin="anonymous" />
+
+  <title>NIVLEK ONLINE SHOE SHOP</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+</head>
+
+<body id="top">
+  <!-- ==============header menu section starts here============== -->
+  <section class="header_menu" id="header_menu">
+    <div class="container-fluid px-0 shadow">
+      <nav class="navbar navbar-expand-lg navbar-light py-3 " style="background-color: #2087ee;">
+        <a class="navbar-brand pl-5 pl-small-0" href="index.html">
+          <img src="assets/images/logo.png" class="img img-fluid" width="120px" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+           
+                    <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+          </ul>
+          <div class="search mr-3">
+            <a href="search.html" class="btn btn-sm btn-outline-light">
+              Search
+            </a>
+          </div>
+          <div class="cart">
+            <a href="cart.html">
+              <i class="fas fa-shopping-cart fa-2x" style="color: rgb(247, 106, 4);"></i>
+              <span class="badge badge-pill badge-primary">0</span>
+            </a>
+            <div class="cart-dropdown" id="cartDropdown" style="display: none;">
+              <ul id="dropdownCartList"></ul>
+              <p id="dropdownTotalPrice"></p>
+          </div>
+          
+          </div><!-- Empty Cart Button in the Header -->
+          <button id="emptyCartBtn" class="empty-cart-btn">Empty Cart</button>
+          
+          <!-- Cart Badge to display the number of items -->
+         
+        </div>
+      </nav>
+    </div>
+  </section>
+  <!-- ==============header menu section ends here============== -->
+
+
+
+  <!-- ==============shop by category starts here============== -->
+  <section class="shop_by_category py-5 my-5" id="shop_by_category" style="background-color: #efeeed;">
+    <div class="container-fluid">
+      <div class="section_title text-center mb-5">
+        <h1 class="text-capitalize">WELCOME TO NIVLEKIE SHOE SHOP</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-12">
+          <div class="card bg-dark text-white">
+            
+              <img class="card-img img img-fluid" src="assets/images/sneaker1.jpg"height="500" alt="Card image"> 
+                           <div class="col-md-4 col-12">
+                <h6 class="shopbytxt">SNEAKERS</h6>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 mt-small-5 mb-small-5">
+          <div class="card bg-dark text-white">
+            
+              <img class="card-img img img-fluid" src="assets/images/official 1.jpg"height="500" alt="Card image">
+              <div class="col-md-4 col-12">
+                <h6 class="shopbytxt">FORMALS</h6>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="card bg-dark text-white">
+            
+              <img class="card-img img img-fluid" src="assets/images/sandals1.jpg" alt="Card image">
+              <div class="col-md-5 col-12">
+                <h6 class="shopbytxt">SANDALS</h6>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==============shop by category ends here============== -->
+
+  <!-- ==============products starts here============== -->
+  <section class="products py-5 my-5 bg-light" id="products">
+    <div class="container ">
+      <div class="section_title text-center mb-5">
+        <h1 class="text-capitalize"><strong>Products</strong></h1>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-4 col-12">
+          <div class="single_product shadow text-center p-1">
+            <div class="product_img">
+              <img src="assets/images/formal1.jpg" class="img img-fluid"
+                  alt=""  style="width: 100%; height: 360px;"></a>
+              <div class="new_product">
+                <span class="badge py-2 px-3 badge-pill badge-danger">exclusive</span>
+              </div>
+            </div>
+            <div class="product-caption my-3">
+              <div class="product-ratting">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <h4>Clarks Shoes</a></h4>
+              <div class="price">
+                <b><span class="mr-1">Ksh</span><span>5499</span></b>
+                <li><button class="add-to-cart" onclick="addToCart('Clarks', 5499)">Add to Cart</button></li>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="single_product shadow text-center p-1 mt-small-5 mb-small-5">
+            <div class="product_img">
+              <img src="assets/images/firstj.jpg"
+                  class="img img-fluid" alt="" style="width: 100%; height: 360px;"></a>
+              <div class="new_product">
+                <span class="badge py-2 px-3 badge-pill badge-danger">exclusive</span>
+              </div>
+            </div>
+            <div class="product-caption my-3">
+              <div class="product-ratting">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>Jordans </a></h4>
+              <div class="price">
+                <b><span class="mr-1">Ksh</span><span>3500</span></b>
+                <li><button class="add-to-cart" onclick="addToCart('Jordans 4', 3500)">Add to Cart</button></li>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="single_product shadow text-center p-1">
+            <div class="product_img">
+              <img src="assets/images/shome.jpg"
+                  class="img img-fluid" alt="" style="width: 100%; height: 360px;"></a>
+              <div class="new_product">
+                <span class="badge py-2 px-3 badge-pill badge-danger">exclusive</span>
+              </div>
+            </div>
+            <div class="product-caption my-3">
+              <div class="product-ratting">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>crocs sandals</a></h4>
+              <div class="price">
+                <b><span class="mr-1">Ksh</span><span>2599</span></b>
+                <li><button class="add-to-cart" onclick="addToCart('crocs sandals', 2599)">Add to Cart</button></li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-12">
+          <div class="single_product shadow text-center p-1">
+            <div class="product_img">
+              <img src="assets/images/ssAdidas1.jpg"
+                  class="img img-fluid" alt="" style="width: 100%; height: 360px;"></a>
+              <div class="new_product">
+                <span class="badge py-2 px-3 badge-pill badge-danger">exclusive</span>
+              </div>
+            </div>
+            <div class="product-caption my-3">
+              <div class="product-ratting">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>Addidas
+              </a></h4>
+              <div class="price">
+                <b><span class="mr-1">Ksh</span><span>2559</span></b>
+                <li><button class="add-to-cart" onclick="addToCart('Addidas', 2559)">Add to Cart</button></li>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="single_product shadow text-center p-1 mt-small-5 mb-small-5">
+            <div class="product_img">
+              <img src="assets/images/airf1.jpg"
+                  class="img img-fluid" alt="" style="width: 100%; height: 360px;"></a>
+              <div class="new_product">
+                <span class="badge py-2 px-3 badge-pill badge-danger">exclusive</span>
+              </div>
+            </div>
+            <div class="product-caption my-3">
+              <div class="product-ratting">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <h4>Airforce 1</a></h4>
+              <div class="price">
+                <b><span class="mr-1">Ksh</span><span>2750</span></b>
+                <li><button class="add-to-cart" onclick="addToCart('Airforce 1', 2750)">Add to Cart</button></li>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12">
+          <div class="single_product shadow text-center p-1">
+            <div class="product_img">
+              <img src="assets/images/ssNike1.jpg" class="img img-fluid"
+                  alt="" style="width: 100%; height: 360px;"></a>
+              <div class="new_product">
+                <span class="badge py-2 px-3 badge-pill badge-danger">exclusive</span>
+              </div>
+            </div>
+            <div class="product-caption my-3">
+              <div class="product-ratting">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <h4>Nike Mid 3</a></h4>
+              <div class="price">
+                <b><span class="mr-1">Ksh</span><span>3499</span></b>
+                <li><button class="add-to-cart" onclick="addToCart('Nike Air Max', 3499)">Add to Cart</button></li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============products ends here============== -->
+
+
+  <!-- ==============feature starts here============== -->
+  <section class="feature py-5 mt-5" id="feature">
+    <div class="container">
+      <div class="section_title text-center mb-5">
+        <h1 class="text-capitalize">Our Features</h1>
+      </div>
+      <div class="row text-white">
+        <div class="col-md-4 col-12 shadow p-3">
+          <div class="text-center">
+            <div class="mb-4">
+              <i class="fas fa-shipping-fast fa-3x mb-3 pt-2"></i>
+              <div>
+                <h3>Free Delivery Method </h3>
+              </div>
+            </div>
+            <div>
+              My e-commerece website provides your ordered goods at your doorstep for free .not a single penny is
+              charged form you .
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 shadow p-3 mt-small-5 mb-small-5">
+          <div class="text-center">
+            <div class="mb-4">
+              <i class="fas fa-lock fa-3x mb-3 pt-2"></i>
+              <div>
+                <h3>Secure Payment System</h3>
+              </div>
+            </div>
+            <div>
+              I accept Mpesa and any type of online payment platform. I support single click
+              payment system .click ! and scan QR code
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 shadow p-3">
+          <div class="text-center">
+            <div class="mb-4">
+              <i class="fas fa-headphones fa-3x mb-3 pt-2"></i>
+              <div>
+                <h3>24/7 Support</h3>
+              </div>
+            </div>
+            <div>
+              Our customer care serives are open 24/7. Any doubt or any confusion feel free to call 0769791611, our customer care
+              serives .
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    // Search products by name
+    function searchProducts() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('searchBox');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("productList");
+        li = ul.getElementsByTagName('li');
+
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("span")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = ""; // Show matching products
+            } else {
+                li[i].style.display = "none"; // Hide others
+            }
+        }
+    }
+
+    // Add product to localStorage (cart)
+    function addToCart(name, price) {
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({ name: name, price: price });
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Update cart count badge
+        updateCartBadge();
+
+        alert(name + ' has been added to the cart!');
+    }
+
+    // Function to update cart item count badge
+    function updateCartBadge() {
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+        document.querySelector('.badge').textContent = cart.length; // Update badge with current count
+    }
+
+    // Update cart badge on page load
+    window.onload = updateCartBadge;
+</script><script>
+  // Function to empty the cart
+  function emptyCart() {
+      // Remove cart from localStorage
+      localStorage.removeItem('cart');
+
+      // Update cart badge to zero
+      updateCartBadge();
+
+      // Alert user that the cart has been emptied
+      alert('Your cart has been emptied!');
+  }
+
+  // Function to update cart item count badge
+  function updateCartBadge() {
+      var cart = JSON.parse(localStorage.getItem('cart')) || [];
+      document.querySelector('.badge').textContent = cart.length; // Update badge with current count
+  }
+
+  // Add event listener to the Empty Cart button
+  document.getElementById('emptyCartBtn').addEventListener('click', emptyCart);
+
+  // Run on page load to update cart badge
+  window.onload = function() {
+      updateCartBadge();  // Update cart badge count
+  };
+</script>
+
+
+</body>
+</html>
+
+<!-- ==============search section ends here============== -->
+
+            </div>
+            <!-- END RESULT -->
+        </div>
+    </div>
+</section>
+
+<!-- ==============search section ends here============== -->
+<script>
+    const cartItems=[
+       { name: "jordan 4", price:3750}, 
+       {name: "clarks", price:5499}, 
+       {name: "airforce 1",price:2750}
+]
+    
+</script>
+
+  <!-- ==============services ends here============== -->
+     <!-- ==============footer starts here============== -->
+     <section class="footer_section pt-5 pb-2 mt-5" id="footer_section">
+      <footer>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-md-3 col-6 pl-5">
+                      <div class="footer_title">
+                          <img src="assets/images/logo.png" width="150px" class="img img-fluid" alt="logo">
+                      </div>
+                      <div>
+                                                </div>
+                  </div>
+                  <div class="col-md-3 col-6">
+                      <div class="footer_title pt-3 mb-3">
+                          <h3>Quick Links</h3>
+                      </div>
+                      <div class="footer_links">
+                          <ul>
+                              <li><a href="javascript:;">About</a></li>
+                              <li><a href="javascript:;">Offers & Discounts</a></li>
+                              <li><a href="javascript:;">Get Coupon</a></li>
+                              <li><a href="javascript:;">Contact Us</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  
+                  <div class="col-md-3 col-6">
+                      <div class="footer_title pt-3 mb-3">
+                          <h3>Support</h3>
+                      </div>
+                      <div class="footer_links">
+                          <ul>
+                              <li><a href="javascript:;">Frequently Asked Questions</a></li>
+                              <li><a href="javascript:;">Terms & Conditions</a></li>
+                              <li><a href="javascript:;">Privacy Policy</a></li>
+                              <li><a href="javascript:;">Report a Payment Issue</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="border-top">
+              <h6 class="text-center mt-3"> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved @2024 This website was made by: <a href="https://wa.me/254717328354?text=Hello%20Nivlek.%20I%20need%20a%20talk%20for%20business" target="_blank"  style="color: red; font-weight: bold;">NivLek.
+              </h6>
+                   </footer>
+  </section>
+  <div class="backtop">
+      <a id="button" href="#top" class="btn btn-lg btn-outline-danger" role="button">
+          <i class="fas fa-chevron-up text-dark"></i>
+      </a>
+  </div>
+  <!-- ==============footer ends here============== -->
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
